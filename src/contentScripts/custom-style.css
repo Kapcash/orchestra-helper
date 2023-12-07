@@ -1,0 +1,12 @@
+.action-btn {
+  border: 1px solid #f2a518;
+  width: 100%;
+  padding: 3px;
+  margin: 2px 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background-color: #f6f6f6;
+}
