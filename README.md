@@ -6,6 +6,8 @@ Its purpose is to provide additional helpful actions on the Orchestra's backoffi
 Features:
  * On the pushings page, provide a shortcut button to unpublish an active pushing: reduce by 1 year the dates and make sure the campaign id didn't change.
 
+![](./src/assets/orchestra-helper-unpublish.gif)
+
 ## Usage
 
 ### Development
