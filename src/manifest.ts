@@ -37,7 +37,6 @@ export async function getManifest() {
     permissions: [
       // 'activeTab',
     ],
-    host_permissions: ['*://*/*'],
     content_scripts: [
       {
         matches: [

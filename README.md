@@ -8,6 +8,17 @@ Features:
 
 ![](./src/assets/orchestra-helper-unpublish.gif)
 
+## How to install the extension?
+
+This extension is not published on the Chrome Web Store, since it's only for internal usage.
+
+Instead, you have to:
+ * download file [`extension.crx`](./extension.crx).
+ * go to [chrome://extensions/](chrome://extensions/)
+ * then drag and drop the file.
+
+Congratulations! The extension is installed :)
+
 ## Usage
 
 ### Development
