@@ -1,10 +1,9 @@
 {
-  "name": "vitesse-webext",
-  "displayName": "Vitesse WebExt",
+  "name": "verychic-orchestra-helper",
+  "displayName": "Verychic Orchestra helper",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@8.3.1",
-  "description": "[description]",
+  "description": "A browser extension providing helper actions on the Orchestra backoffice pages.",
   "scripts": {
     "dev": "npm run clear && cross-env NODE_ENV=development run-p dev:*",
     "dev-firefox": "npm run clear && cross-env NODE_ENV=development EXTENSION=firefox run-p dev:*",
