@@ -13,7 +13,7 @@ Features:
 This extension is not published on the Chrome Web Store, since it's only for internal usage.
 
 Instead, you have to:
- * download file [`extension.crx`](./extension.crx).
+ * download file [`extension.crx`](https://github.com/Kapcash/verychic-orchestra-helper/releases/download/1.0.0/extension.crx).
  * go to [chrome://extensions/](chrome://extensions/)
  * then drag and drop the file.
 

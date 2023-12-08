@@ -2,7 +2,7 @@
 .idea/
 .vite-ssg-dist
 .vite-ssg-temp
-# *.crx
+*.crx
 *.local
 *.log
 *.pem
