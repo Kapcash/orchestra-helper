@@ -1,5 +1,5 @@
 .action-btn {
-  border: 1px solid #f2a518;
+  border: 1px solid #b46403;
   padding: 4px 18px;
   margin: 2px;
   border-radius: 3px;
@@ -10,4 +10,10 @@
 }
 .action-btn:hover:not(:disabled) {
   background-color: #f6f6f6;
+}
+input.error-html::selection {
+  background: red;
+}
+input.error-html, input:invalid {
+  border: 1px solid red;
 }

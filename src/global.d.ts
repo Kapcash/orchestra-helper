@@ -6,3 +6,7 @@ declare module '*.vue' {
   const component: any
   export default component
 }
+
+declare module 'is-html' {
+  export default function isHtml (str: string): boolean
+}

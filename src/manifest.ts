@@ -43,11 +43,26 @@ export async function getManifest() {
           'https://*.orchestra-platform.com/admin/chooseHotelPushingAction*',
         ],
         js: [
-          'dist/contentScripts/index.global.js',
+          'dist/contentScripts/pushing.global.js',
+        ],
+      },
+      {
+        matches: [
+          'https://*.orchestra-platform.com/admin/popupHotelEdito*',
+        ],
+        js: [
+          'dist/contentScripts/edito.global.js',
         ],
       },
     ],
     web_accessible_resources: [
+      {
+        resources: ['dist/contentScripts/style.css'],
+        matches: [
+          // '<all_urls>',
+          'https://*.orchestra-platform.com/*',
+        ],
+      },
       {
         resources: ['dist/contentScripts/style.css'],
         matches: [

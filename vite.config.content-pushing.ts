@@ -17,18 +17,18 @@ export default defineConfig({
     watch: isDev
       ? {}
       : undefined,
-    outDir: r('extension/dist/background'),
+    outDir: r('extension/dist/contentScripts'),
     cssCodeSplit: false,
     emptyOutDir: false,
-    sourcemap: false,
+    sourcemap: isDev ? 'inline' : false,
     lib: {
-      entry: r('src/background/main.ts'),
+      entry: r('src/contentScripts/pushing.ts'),
       name: packageJson.name,
       formats: ['iife'],
     },
     rollupOptions: {
       output: {
-        entryFileNames: 'index.mjs',
+        entryFileNames: e => `${e.name}.global.js`,
         extend: true,
       },
     },

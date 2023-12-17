@@ -1,18 +1,17 @@
 /* eslint-disable no-console */
-// import { onMessage } from 'webext-bridge/content-script'
 import './custom-style.css'
 
-const campaignIdContainerSelector = '#mainzone_0 td.main-zone-content';
+const campaignIdContainerSelector = '#mainzone_0 td.main-zone-content'
 
 // Firefox `browser.tabs.executeScript()` requires scripts return a primitive value
+console.info('[orchestra-helper] Setting helpers UI on the pushings page');
+
+/* ===== Setup UI ===== */
 (() => {
-  console.info('[orchestra-helper] Setting helpers UI on the pushings page')
-
-  /* ===== Setup UI ===== */
-
   const rightActions = document.querySelector('#hotelPushingForm > div.buttons > div.right')
-  if (!rightActions)
+  if (!rightActions) {
     throw new Error('Right actions container not found')
+  }
 
   const unpublishButton = document.createElement('button')
   unpublishButton.id = 'orchestra-helper_unpublish-button'
@@ -50,8 +49,9 @@ const campaignIdContainerSelector = '#mainzone_0 td.main-zone-content';
     reduceByOneYear(startDateStr)
     reduceByOneYear(endDateStr)
 
-    if (getCampaignId() !== initialCampaignId)
+    if (getCampaignId() !== initialCampaignId) {
       setCampaignIdWarning('Attention ! La campagne a été modifiée. Pour dépublier correctement le pushing, nous allons automatiquement remettre la campagne originale.')
+    }
 
     setCampaignId(initialCampaignId)
 
@@ -72,15 +72,17 @@ function isEndDateInFuture(): boolean {
 
 function getCampaignId(): string {
   const campaingId = (document.querySelector(`${campaignIdContainerSelector} > input`) as HTMLInputElement)?.value
-  if (!campaingId)
+  if (!campaingId) {
     throw new Error('CampaignId not found!')
+  }
   return campaingId
 }
 
 function setCampaignId(campaingId: string) {
   const campaingIdInput = (document.querySelector(`${campaignIdContainerSelector} > input`) as HTMLInputElement)
-  if (!campaingId)
+  if (!campaingId) {
     throw new Error('CampaignId not found!')
+  }
   campaingIdInput.value = campaingId
 }
 
