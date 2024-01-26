@@ -41,6 +41,7 @@ export async function getManifest() {
       {
         matches: [
           'https://*.orchestra-platform.com/admin/chooseHotelPushingAction*',
+          'https://*.orchestra-platform.com/admin/chooseProductPushingAction*',
         ],
         js: [
           'dist/contentScripts/pushing.global.js',

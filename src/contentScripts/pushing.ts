@@ -8,7 +8,7 @@ console.info('[orchestra-helper] Setting helpers UI on the pushings page');
 
 /* ===== Setup UI ===== */
 (() => {
-  const rightActions = document.querySelector('#hotelPushingForm > div.buttons > div.right')
+  const rightActions = document.querySelector(':is(#hotelPushingForm, #productPushingForm) > div.buttons > div.right')
   if (!rightActions) {
     throw new Error('Right actions container not found')
   }
@@ -89,7 +89,7 @@ function setCampaignId(campaingId: string) {
 function setCampaignIdWarning(message: string) {
   const campaingIdContainer = document.querySelector(campaignIdContainerSelector)
   const warningSpan = document.createElement('span')
-  warningSpan.style.color = 'orange'
+  warningSpan.style.color = '#b46403'
   warningSpan.textContent = message
   campaingIdContainer?.appendChild(warningSpan)
 }
